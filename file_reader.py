@@ -31,6 +31,7 @@ def single_exception_handling_reader(file_path: str) -> None:
     except FileNotFoundError as e:
         print("Could not find the file with the provided path.")
         logging.error(e)
+    raise PermissionError
 
 
 # We can handle as many different types of exceptions as we need to.
